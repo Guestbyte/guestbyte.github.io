@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  hugo:
+    image: "klakegg/hugo:ext-alpine"
+    stdin_open: true
+    tty: true
+    volumes: 
+      - ".:/src"
+    environment:
+      - HUGO_ENV=DEV
